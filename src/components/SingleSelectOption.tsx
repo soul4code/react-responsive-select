@@ -59,12 +59,20 @@ export class SingleSelectOption extends React.Component<TProps> {
   }
 
   public render(): React.ReactNode {
-    const { index, name, nextPotentialSelectionIndex, option, singleSelectSelectedIndex, optHeaderLabel } = this.props;
+    const {
+      index,
+      name,
+      nextPotentialSelectionIndex,
+      option,
+      singleSelectSelectedIndex,
+      optHeaderLabel,
+      onHover,
+    } = this.props;
 
     return (
       <li
         role="menuitem"
-        onMouseEnter={this.props.onHover}
+        onMouseEnter={onHover}
         data-testid={`rrs-option_${name}_${index}`}
         tabIndex={-1}
         aria-disabled={this.isDisabled(option) ? 'true' : 'false'}

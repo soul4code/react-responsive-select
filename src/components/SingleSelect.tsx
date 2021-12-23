@@ -121,6 +121,7 @@ export class SingleSelect extends React.Component<TProps> {
       options,
       singleSelectSelectedIndex,
       singleSelectSelectedOption,
+      onOptionHover,
     } = this.props;
 
     let optHeaderLabel: string = '';
@@ -168,7 +169,7 @@ export class SingleSelect extends React.Component<TProps> {
                 <SingleSelectOption
                   key={index}
                   name={name}
-                  onHover={() => this.props.onOptionHover(option)}
+                  onHover={() => onOptionHover(option)}
                   optHeaderLabel={optHeaderLabel}
                   optionsContainerRef={this.optionsContainer}
                   index={index}

@@ -139,7 +139,7 @@ export class Select extends React.Component<IProps, IState> {
   };
 
   public render(): React.ReactNode {
-    const { prefix, caretIcon, modalCloseButton } = this.props;
+    const { prefix, caretIcon, modalCloseButton, onOptionHover = () => undefined } = this.props;
     const {
       altered,
       disabled,
@@ -217,7 +217,7 @@ export class Select extends React.Component<IProps, IState> {
             isOptionsPanelOpen={isOptionsPanelOpen}
             options={options}
             selectBoxRef={this.selectBox}
-            onOptionHover={this.props.onOptionHover || (() => undefined)}
+            onOptionHover={onOptionHover}
           />
         )}
       </div>
