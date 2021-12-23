@@ -16,6 +16,7 @@ interface TProps {
   customLabelText: React.ReactNode;
   disabled: boolean;
   options: IOption[];
+  onOptionHover: (option: IOption) => void;
 }
 
 export class SingleSelect extends React.Component<TProps> {
@@ -167,6 +168,7 @@ export class SingleSelect extends React.Component<TProps> {
                 <SingleSelectOption
                   key={index}
                   name={name}
+                  onHover={() => this.props.onOptionHover(option)}
                   optHeaderLabel={optHeaderLabel}
                   optionsContainerRef={this.optionsContainer}
                   index={index}

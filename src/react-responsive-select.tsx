@@ -217,6 +217,7 @@ export class Select extends React.Component<IProps, IState> {
             isOptionsPanelOpen={isOptionsPanelOpen}
             options={options}
             selectBoxRef={this.selectBox}
+            onOptionHover={this.props.onOptionHover || (() => undefined)}
           />
         )}
       </div>

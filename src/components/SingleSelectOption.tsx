@@ -11,6 +11,7 @@ interface TProps {
   option: IOption;
   singleSelectSelectedIndex: number;
   optHeaderLabel: string;
+  onHover: () => void;
 }
 
 export class SingleSelectOption extends React.Component<TProps> {
@@ -63,6 +64,7 @@ export class SingleSelectOption extends React.Component<TProps> {
     return (
       <li
         role="menuitem"
+        onmouseenter={this.props.onHover}
         data-testid={`rrs-option_${name}_${index}`}
         tabIndex={-1}
         aria-disabled={this.isDisabled(option) ? 'true' : 'false'}

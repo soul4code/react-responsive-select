@@ -93,6 +93,8 @@ export interface IProps {
    * You'll essentially be clicking the background so this is purely visual.
    */
   modalCloseButton?: React.ReactNode;
+
+  onOptionHover?: (option: IOption) => void;
 }
 
 export interface IState {
